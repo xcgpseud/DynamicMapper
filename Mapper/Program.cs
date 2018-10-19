@@ -32,6 +32,8 @@ namespace Mapper
                 .Create()
                 .WithInputObject(person)
                 .WithMapping("Full", "FullName")
+                .WithMapping("FirstName", "LastName")
+                .WithMapping("LastName", "FirstName")
                 .WithMappingObject(new {Full = fullName})
                 .Build()
                 .Map();
